@@ -116,7 +116,7 @@ export default function WelcomeScreen({ onOpen }: WelcomeScreenProps) {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
             >
-              Fauzan
+              Berry
             </motion.h1>
 
             <motion.div
@@ -134,7 +134,7 @@ export default function WelcomeScreen({ onOpen }: WelcomeScreenProps) {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.4, duration: 0.6, ease: "easeOut" }}
             >
-              Haliza
+              Chika
             </motion.h1>
 
             {/* Ornament bottom */}
