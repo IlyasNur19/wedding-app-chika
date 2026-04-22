@@ -4,16 +4,16 @@
 
 export const COUPLE = {
   groom: {
-    fullName: "Ahmad Fauzan",
-    shortName: "Fauzan",
+    fullName: "Masss Berry ",
+    shortName: "Berry",
     parentInfo: "Putra dari Bpk. H. Ahmad Ridwan & Ibu Hj. Siti Aminah",
     instagram: "https://instagram.com/ahmadfauzan",
     instagramHandle: "@ahmadfauzan",
   },
   bride: {
-    fullName: "Siti Nurhaliza",
-    shortName: "Haliza",
-    parentInfo: "Putri dari Bpk. H. Muhammad Yusuf & Ibu Hj. Fatimah Zahra",
+    fullName: "Chika Amelia Putri",
+    shortName: "Chika",
+    parentInfo: "Putri dari Bapak Puji Utomo & Ibu Wiwik",
     instagram: "https://instagram.com/sitinurhaliza",
     instagramHandle: "@sitinurhaliza",
   },

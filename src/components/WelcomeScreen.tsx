@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getGuestName } from "@/lib/utils";
+import Image from "next/image";
 
 interface WelcomeScreenProps {
   onOpen: () => void;
@@ -40,38 +41,39 @@ export default function WelcomeScreen({ onOpen }: WelcomeScreenProps) {
           {/* Background */}
           <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-ivory)] via-[var(--color-champagne-light)] to-[var(--color-soft-pink)]" />
 
-          {/* Floating ornaments */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {[...Array(12)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute text-2xl opacity-20"
-                initial={{
-                  x: `${Math.random() * 100}%`,
-                  y: `${Math.random() * 100}%`,
-                }}
-                animate={{
-                  y: [
-                    `${Math.random() * 100}%`,
-                    `${Math.random() * 100}%`,
-                    `${Math.random() * 100}%`,
-                  ],
-                  x: [
-                    `${Math.random() * 100}%`,
-                    `${Math.random() * 100}%`,
-                    `${Math.random() * 100}%`,
-                  ],
-                }}
-                transition={{
-                  duration: 15 + Math.random() * 10,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-              >
-                {["🌸", "✿", "❀", "🌷", "💐", "🌹"][i % 6]}
-              </motion.div>
-            ))}
-          </div>
+          {/* Top Border Ornament */}
+          <motion.div 
+            className="absolute top-0 left-0 w-full pointer-events-none z-0 flex justify-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <Image 
+              src="/top-border-flower.png" 
+              alt="Top Ornament" 
+              width={1200} 
+              height={400} 
+              className="w-full h-auto object-cover md:object-contain max-h-[30vh] sm:max-h-[40vh] opacity-90"
+              priority
+            />
+          </motion.div>
+
+        {/* bottom border ornament  */}
+        <motion.div
+          className="absolute bottom-0 left-0 w-full pointer-events-none z-0 flex justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          <Image
+            src="/bottom-border-flower.png"
+            alt="Bottom Ornament"
+            width={1200}
+            height={400}
+            className="w-full h-auto object-cover md:object-contain max-h-[30vh] sm:max-h-[40vh] opacity-90"
+            priority
+          />
+        </motion.div>
 
           {/* Content Card */}
           <motion.div
@@ -116,7 +118,7 @@ export default function WelcomeScreen({ onOpen }: WelcomeScreenProps) {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
             >
-              Fauzan
+              Berry
             </motion.h1>
 
             <motion.div
@@ -134,7 +136,7 @@ export default function WelcomeScreen({ onOpen }: WelcomeScreenProps) {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.4, duration: 0.6, ease: "easeOut" }}
             >
-              Haliza
+              Chika
             </motion.h1>
 
             {/* Ornament bottom */}

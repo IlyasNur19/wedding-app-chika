@@ -51,7 +51,7 @@ export default function Footer() {
           transition={{ delay: 0.3 }}
         >
           <p className="font-script text-3xl text-[var(--color-burgundy)] mb-1">
-            Fauzan & Haliza
+            Berry & Chika
           </p>
           <p className="text-[var(--color-rose-gold)] text-xs tracking-widest">
             beserta keluarga besar
@@ -77,7 +77,7 @@ export default function Footer() {
           Made with ❤️ for our special day
         </p>
         <p className="text-[var(--color-charcoal-light)]/40 text-[10px] mt-1">
-          © 2026 Wedding of Fauzan & Haliza
+          © 2026 Wedding of Berry & Chika
         </p>
       </motion.div>
     </footer>

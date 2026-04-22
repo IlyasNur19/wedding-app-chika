@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { COUPLE } from "@/lib/constants";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -42,7 +43,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col items-center">
         {/* Bismillah */}
         <motion.p
-          className="text-[var(--color-burgundy)] text-xl mb-6 opacity-70"
+          className="text-[var(--color-burgundy)] text-xl mb-2 opacity-70"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 0.7, y: 0 }}
           viewport={{ once: true }}
@@ -54,7 +55,7 @@ export default function HeroSection() {
 
         {/* Subtitle */}
         <motion.p
-          className="text-[var(--color-rose-gold)] text-xs tracking-[6px] uppercase mb-6"
+          className="text-[var(--color-rose-gold)] text-xs tracking-[6px] uppercase mb-15"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -65,13 +66,19 @@ export default function HeroSection() {
 
         {/* Ornament */}
         <motion.div
-          className="ornament-divider mb-8"
-          initial={{ opacity: 0, scaleX: 0 }}
-          whileInView={{ opacity: 1, scaleX: 1 }}
+          className="relative"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          <span className="text-[var(--color-rose-gold)] text-lg">✦</span>
+          <Image 
+            src="/bunga-asset-1.png" 
+            alt="Flower Ornament" 
+            width={800} 
+            height={800} 
+            className="w-70 md:w-40 h-auto opacity-90 object-contain"
+          />
         </motion.div>
 
         {/* Groom Name */}
@@ -109,16 +116,23 @@ export default function HeroSection() {
           {COUPLE.bride.shortName}
         </motion.h1>
 
-        {/* Ornament */}
+         {/* Ornament */}
         <motion.div
-          className="ornament-divider mb-8"
-          initial={{ opacity: 0, scaleX: 0 }}
-          whileInView={{ opacity: 1, scaleX: 1 }}
+          className="relative bottom-10"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 1, duration: 0.6 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
         >
-          <span className="text-[var(--color-rose-gold)] text-lg">✦</span>
+          <Image 
+            src="/bunga-asset-2.png" 
+            alt="Flower Ornament" 
+            width={800} 
+            height={800} 
+            className="w-70 md:w-40 h-auto opacity-90 object-contain"
+          />
         </motion.div>
+        
 
         {/* Date */}
         <motion.div
@@ -132,7 +146,7 @@ export default function HeroSection() {
             Senin, 15 Juni 2026
           </p>
           <p className="text-[var(--color-charcoal-light)] text-xs tracking-widest">
-            Jakarta, Indonesia
+            Karanganyar, Indonesia
           </p>
         </motion.div>
 

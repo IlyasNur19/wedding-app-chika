@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { COUPLE } from "@/lib/constants";
+import Image from "next/image";
 
 export default function CoupleProfile() {
   return (
@@ -64,16 +65,8 @@ export default function CoupleProfile() {
           {/* Avatar Placeholder */}
           <div className="relative w-32 h-32 mx-auto mb-4">
             <div className="w-full h-full rounded-full bg-gradient-to-br from-[var(--color-champagne)] to-[var(--color-champagne-dark)] flex items-center justify-center border-4 border-white shadow-lg">
-              <span className="text-5xl">🤵</span>
+              <Image src="/laki-laki_1.png" alt="Cowok" width={128} height={128} className="w-full h-full rounded-full object-cover"/>
             </div>
-            {/* Ring decoration */}
-            <motion.div
-              className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-[var(--color-rose-gold)] flex items-center justify-center shadow-md"
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              <span className="text-sm">💍</span>
-            </motion.div>
           </div>
 
           <h3 className="font-heading text-2xl text-[var(--color-burgundy)] mb-1 font-semibold">
@@ -125,16 +118,8 @@ export default function CoupleProfile() {
           {/* Avatar Placeholder */}
           <div className="relative w-32 h-32 mx-auto mb-4">
             <div className="w-full h-full rounded-full bg-gradient-to-br from-[var(--color-soft-pink)] to-[var(--color-rose-gold-light)] flex items-center justify-center border-4 border-white shadow-lg">
-              <span className="text-5xl">👰</span>
+              <Image src="/perempuan_1.png" alt="Cewek" width={128} height={128} className="w-full h-full rounded-full object-cover"/>
             </div>
-            {/* Ring decoration */}
-            <motion.div
-              className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-[var(--color-rose-gold)] flex items-center justify-center shadow-md"
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-            >
-              <span className="text-sm">💍</span>
-            </motion.div>
           </div>
 
           <h3 className="font-heading text-2xl text-[var(--color-burgundy)] mb-1 font-semibold">
