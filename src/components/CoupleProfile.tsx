@@ -145,6 +145,15 @@ export default function CoupleProfile() {
               className="w-full h-auto object-cover opacity-85"
             />
           </div>
+          <div className="absolute bottom-0 left-0 w-full pointer-events-none">
+            <Image
+              src="/bottom-border-flower.png"
+              alt=""
+              width={600}
+              height={200}
+              className="w-full h-auto object-cover opacity-85"
+            />
+          </div>
 
           {/* Avatar Placeholder */}
           <div className="relative w-32 h-32 mx-auto mb-4">

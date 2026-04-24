@@ -310,18 +310,18 @@ export default function RSVPSection() {
               {wishes.map((wish, i) => (
                 <motion.div
                   key={wish.id}
-                  className="wedding-card py-4 px-5"
+                  className="wedding-card py-4 px-5 overflow-hidden"
                   initial={{ opacity: 0, y: 20, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ delay: i * 0.05 }}
                 >
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--color-rose-gold)] to-[var(--color-burgundy)] flex items-center justify-center text-white text-xs font-bold shadow-sm">
+                  <div className="flex items-center gap-3 mb-2 min-w-0">
+                    <div className="w-8 h-8 shrink-0 rounded-full bg-gradient-to-br from-[var(--color-rose-gold)] to-[var(--color-burgundy)] flex items-center justify-center text-white text-xs font-bold shadow-sm">
                       {wish.name.charAt(0)}
                     </div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium text-[var(--color-charcoal)]">
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-[var(--color-charcoal)] truncate">
                         {wish.name}
                       </p>
                       <p className="text-[10px] text-[var(--color-charcoal-light)]">
@@ -329,7 +329,7 @@ export default function RSVPSection() {
                       </p>
                     </div>
                   </div>
-                  <p className="text-sm text-[var(--color-charcoal-light)] leading-relaxed pl-11">
+                  <p className="text-sm text-[var(--color-charcoal-light)] leading-relaxed pl-11 break-words overflow-wrap-anywhere">
                     {wish.message}
                   </p>
                 </motion.div>
