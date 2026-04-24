@@ -100,38 +100,7 @@ export const BANK_ACCOUNTS = [
   },
 ];
 
-export const MOCK_WISHES = [
-  {
-    id: 1,
-    name: "Rizky Pratama",
-    message: "Barakallah! Semoga menjadi keluarga yang sakinah, mawaddah, warahmah. Aamiin 🤲",
-    timestamp: "2 jam lalu",
-  },
-  {
-    id: 2,
-    name: "Anisa Rahma",
-    message: "Selamat menempuh hidup baru! Semoga selalu diberkahi Allah SWT 💐",
-    timestamp: "3 jam lalu",
-  },
-  {
-    id: 3,
-    name: "Budi Santoso",
-    message: "Happy wedding bro! Semoga lancar dan bahagia selalu ya ❤️",
-    timestamp: "5 jam lalu",
-  },
-  {
-    id: 4,
-    name: "Dewi Lestari",
-    message: "MasyaAllah, pasangan yang serasi! Barakallahu laka wa baraka 'alaik 🌸",
-    timestamp: "1 hari lalu",
-  },
-  {
-    id: 5,
-    name: "Farhan Adi",
-    message: "Semoga pernikahan ini menjadi awal dari kebahagiaan yang tiada henti. Aamiin! 🎉",
-    timestamp: "1 hari lalu",
-  },
-];
+// MOCK_WISHES removed — wishes data is now fetched from Supabase
 
 export const NAV_ITEMS = [
   { id: "hero", label: "Beranda", icon: "home" },
