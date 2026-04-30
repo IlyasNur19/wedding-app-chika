@@ -154,7 +154,7 @@ export default function WelcomeScreen({ onOpen }: WelcomeScreenProps) {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.7 }}
             >
-              15 . 06 . 2026
+              6 . 06 . 2026
             </motion.p>
 
             {/* Guest Name */}

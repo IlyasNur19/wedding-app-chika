@@ -4,9 +4,9 @@
 
 export const COUPLE = {
   groom: {
-    fullName: "Masss Berry ",
+    fullName: "Berry Wibowo",
     shortName: "Berry",
-    parentInfo: "Putra dari Bpk. H. Ahmad Ridwan & Ibu Hj. Siti Aminah",
+    parentInfo: `Putra dari Bapak (Alm) \nIndriyanto & ibu Suwarni`,
     instagram: "https://instagram.com/ahmadfauzan",
     instagramHandle: "@ahmadfauzan",
   },
@@ -24,7 +24,7 @@ export const WEDDING_DATE = new Date("2026-06-15T08:00:00+07:00");
 export const EVENTS = {
   akad: {
     title: "Akad Nikah",
-    date: "Senin, 15 Juni 2026",
+    date: "Sabtu, 6 Juni 2026",
     time: "08:00 - 10:00 WIB",
     venue: "Masjid Agung Al-Azhar",
     address: "Jl. Sisingamangaraja, Kebayoran Baru, Jakarta Selatan",

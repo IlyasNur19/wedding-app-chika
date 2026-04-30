@@ -56,7 +56,7 @@ export default function CoupleProfile() {
       <div className="flex flex-col items-center gap-10 max-w-sm mx-auto">
         {/* Groom Card */}
         <motion.div
-          className="wedding-card w-full text-center relative overflow-hidden pt-12"
+          className="wedding-card w-full text-center relative overflow-hidden p-20"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -72,6 +72,8 @@ export default function CoupleProfile() {
               className="w-full h-auto object-cover opacity-85"
             />
           </div>
+
+          {/* bottom Flower Ornament */}
           <div className="absolute bottom-0 left-0 w-full pointer-events-none">
             <Image
               src="/bottom-border-flower.png"
@@ -92,7 +94,7 @@ export default function CoupleProfile() {
           <h3 className="font-heading text-2xl text-[var(--color-burgundy)] mb-1 font-semibold">
             {COUPLE.groom.fullName}
           </h3>
-          <p className="text-[var(--color-charcoal-light)] text-sm mb-3 leading-relaxed">
+          <p className="text-[var(--color-charcoal-light)] text-sm mb-3 leading-relaxed whitespace-pre-line">
             {COUPLE.groom.parentInfo}
           </p>
           <a
@@ -129,7 +131,7 @@ export default function CoupleProfile() {
 
         {/* Bride Card */}
         <motion.div
-          className="wedding-card w-full text-center relative overflow-hidden pt-12"
+          className="wedding-card w-full text-center relative overflow-hidden p-20"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -165,7 +167,7 @@ export default function CoupleProfile() {
           <h3 className="font-heading text-2xl text-[var(--color-burgundy)] mb-1 font-semibold">
             {COUPLE.bride.fullName}
           </h3>
-          <p className="text-[var(--color-charcoal-light)] text-sm mb-3 leading-relaxed">
+          <p className="text-[var(--color-charcoal-light)] text-sm mb-3 leading-relaxed whitespace-pre-line">
             {COUPLE.bride.parentInfo}
           </p>
           <a

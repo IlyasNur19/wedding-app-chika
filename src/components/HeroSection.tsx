@@ -143,7 +143,7 @@ export default function HeroSection() {
           transition={{ delay: 1.1, duration: 0.6 }}
         >
           <p className="text-[var(--color-charcoal)] text-sm tracking-[3px] uppercase">
-            Senin, 15 Juni 2026
+            Sabtu, 6 Juni 2026
           </p>
           <p className="text-[var(--color-charcoal-light)] text-xs tracking-widest">
             Karanganyar, Indonesia
