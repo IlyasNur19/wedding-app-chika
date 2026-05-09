@@ -85,9 +85,9 @@ export default function StoryTimeline() {
                     <h3 className="font-heading text-lg text-[var(--color-burgundy)] font-semibold leading-tight">
                       {item.title}
                     </h3>
-                    <p className="text-[var(--color-rose-gold)] text-xs font-medium">
+                    {/* <p className="text-[var(--color-rose-gold)] text-xs font-medium">
                       {item.date}
-                    </p>
+                    </p> */}
                   </div>
                 </div>
                 <p className="text-[var(--color-charcoal-light)] text-sm leading-relaxed">

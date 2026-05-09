@@ -139,7 +139,7 @@ export default function RSVPSection() {
         viewport={{ once: true }}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        <form onSubmit={handleSubmit} className="wedding-card space-y-5">
+        <form onSubmit={handleSubmit} className="wedding-card space-y-5 p-10">
           {/* Name */}
           <div>
             <label

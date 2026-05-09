@@ -7,36 +7,36 @@ export const COUPLE = {
     fullName: "Berry Wibowo",
     shortName: "Berry",
     parentInfo: `Putra dari Bapak (Alm) \nIndriyanto & ibu Suwarni`,
-    instagram: "https://instagram.com/ahmadfauzan",
-    instagramHandle: "@ahmadfauzan",
+    instagram: "https://www.instagram.com/massberrrrr_",
+    instagramHandle: "@massberrrrr_",
   },
   bride: {
     fullName: "Chika Amelia Putri",
     shortName: "Chika",
     parentInfo: "Putri dari Bapak Puji Utomo & Ibu Wiwik",
-    instagram: "https://instagram.com/sitinurhaliza",
-    instagramHandle: "@sitinurhaliza",
+    instagram: "https://instagram.com/_chikamelia",
+    instagramHandle: "@_chikamelia",
   },
 };
 
-export const WEDDING_DATE = new Date("2026-06-15T08:00:00+07:00");
+export const WEDDING_DATE = new Date("2026-06-06T09:00:00+07:00");
 
 export const EVENTS = {
   akad: {
     title: "Akad Nikah",
     date: "Sabtu, 6 Juni 2026",
-    time: "08:00 - 10:00 WIB",
-    venue: "Masjid Agung Al-Azhar",
-    address: "Jl. Sisingamangaraja, Kebayoran Baru, Jakarta Selatan",
-    mapsUrl: "https://maps.google.com/?q=Masjid+Agung+Al-Azhar+Jakarta",
+    time: "09:00 WIB",
+    venue: "Kuliner Mba Ning, Ngargoyoso, Kemuning ",
+    address: "Puntukrejo, Kec. Ngargoyoso, Kabupaten Karanganyar, Jawa Tengah 57793",
+    mapsUrl: "https://maps.app.goo.gl/CkQoCXuLjcDN1nGM9",
   },
   resepsi: {
     title: "Resepsi",
-    date: "Senin, 15 Juni 2026",
-    time: "11:00 - 14:00 WIB",
-    venue: "Grand Ballroom, Hotel Mulia",
-    address: "Jl. Asia Afrika, Senayan, Jakarta Selatan",
-    mapsUrl: "https://maps.google.com/?q=Hotel+Mulia+Senayan+Jakarta",
+    date: "Sabtu, 6 Juni 2026",
+    time: "10:00 WIB",
+    venue: "Kuliner Mba Ning, Ngargoyoso, Kemuning ",
+    address: "Puntukrejo, Kec. Ngargoyoso, Kabupaten Karanganyar, Jawa Tengah 57793",
+    mapsUrl: "https://maps.app.goo.gl/CkQoCXuLjcDN1nGM9",
   },
 };
 
@@ -46,39 +46,31 @@ export const STORY_TIMELINE = [
     title: "Pertemuan Pertama",
     date: "Maret 2020",
     description:
-      "Takdir mempertemukan kami di acara kampus. Sebuah senyuman sederhana yang mengawali segalanya.",
+      "Tidak ada yang kebetulan didunia ini, semua sudah tersusun dengan sangat rapi oleh sang maha kuasa, kita tidak bisa memilih kepada siapa kita akan jatuh cinta. Kami bertemu pertama kalinya tanpa sengaja, tepatnya saat kami berada di suatu event lari kota solo, tidak ada yang pernah menyangka bahwa pertemuan itu membawa kami menuju sebuah ikatan suci.",
     emoji: "✨",
   },
   {
     id: 2,
-    title: "Saling Mengenal",
+    title: "Pendekatan",
     date: "Juni 2020",
     description:
-      "Percakapan panjang setiap malam, berbagi cerita dan mimpi. Perlahan hati mulai berbicara.",
+      "Berkali-kali kami bertemu di tengah keramaian, hanya saja kami saling pandang dalam diam. Hingga satu percakapan panjang membuka hati 'ternyata kita punya rasa yang sama'. Dengan penuh kemantapan hati kami saling meminta petunjuk dengan istikharah, doa, dan meminta  restu orang tua. Kami memang tak 100% serasi, tapi visi, sudut pandang, dan tujuan kami searah. Dari tatap malu-malu, kini kami memilih melangkah bersama. Bismillah, kami menikah",
     emoji: "💬",
   },
   {
     id: 3,
-    title: "Menjalin Cinta",
+    title: "Lamaran",
     date: "Oktober 2020",
     description:
-      "Resmi menjadi pasangan. Bersama melewati suka dan duka, semakin menguatkan ikatan hati.",
+      "Kehendaknya menuntun kami pada sebuah pertemuan dua keluarga besar yang tak pernah disangka, hingga akhirnya pada 14 DESEMSER 2025 terlaksanalah khitbah sederhana yang penuh makna, membawa kami menuju sebuah ikatan yang ia ridho-i",
     emoji: "💕",
-  },
-  {
-    id: 4,
-    title: "Lamaran",
-    date: "Desember 2025",
-    description:
-      "Sebuah pertanyaan sederhana yang mengubah segalanya. 'Maukah kamu menemani hidupku selamanya?'",
-    emoji: "💍",
   },
   {
     id: 5,
     title: "Pernikahan",
     date: "Juni 2026",
     description:
-      "Hari yang dinantikan telah tiba. Bismillah, kami siap mengarungi bahtera rumah tangga bersama.",
+      'Bukan karena bertemu lalu berjodoh, tapi karna berjodohlah kami bisa bertemu, dan memutuskan untuk mengikrarkan janji suci pernikahan pada 6 JUNI 2026 sebagaimana yang pernah dikatakan oleh Ali Bin Abi Thalib : "Apa yang menjadi takdirmu akan menemukan jalannya untuk menemukanmu" ',
     emoji: "🕌",
   },
 ];
