@@ -198,12 +198,6 @@ export default function DigitalGift() {
                   }}
                 >
                   <Image src="/qris.jpeg" alt="QRIS" width={260} height={260} className="rounded-2xl" />
-                  <p className="text-[var(--color-rose-gold)] text-sm font-medium opacity-60">
-                    QRIS Code
-                  </p>
-                  <p className="text-[var(--color-charcoal-light)] text-xs mt-1 opacity-40">
-                    Letakkan gambar QRIS di sini
-                  </p>
                 </div>
 
                 {/* Info */}
