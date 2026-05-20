@@ -50,9 +50,93 @@ export default function DigitalGift() {
       </motion.div>
 
       {/* Bank Account Cards */}
+      <div className="max-w-sm mx-auto mb-8 space-y-4">
+        {BANK_ACCOUNTS.map((account, index) => (
+          <motion.div
+            key={account.id}
+            className="wedding-card p-6 relative overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 + index * 0.15, duration: 0.6 }}
+          >
+            {/* Accent Stripe */}
+            <div
+              className="absolute top-0 left-0 w-full h-1"
+              style={{
+                background:
+                  "linear-gradient(90deg, var(--color-rose-gold), var(--color-burgundy-light))",
+              }}
+            />
+
+            {/* Bank Info */}
+            <div className="flex items-center gap-3 mb-4">
+              <div
+                className="w-11 h-11 rounded-xl flex items-center justify-center text-lg"
+                style={{
+                  background: "var(--color-champagne-light)",
+                  border: "1px solid var(--color-champagne-dark)",
+                }}
+              >
+                {account.icon}
+              </div>
+              <div className="text-left">
+                <p className="text-[var(--color-burgundy)] text-sm font-heading font-semibold">
+                  {account.bank}
+                </p>
+                <p className="text-[var(--color-charcoal-light)] text-xs">
+                  a.n. {account.accountName}
+                </p>
+              </div>
+            </div>
+
+            {/* Account Number + Copy */}
+            <div
+              className="flex items-center justify-between rounded-xl px-4 py-3"
+              style={{
+                background: "var(--color-champagne-light)",
+                border: "1px solid var(--color-champagne-dark)",
+              }}
+            >
+              <span className="text-[var(--color-burgundy)] font-mono text-base tracking-widest font-semibold">
+                {account.accountNumber}
+              </span>
+              <motion.button
+                onClick={() => handleCopy(account.accountNumber, account.id)}
+                className="flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg transition-all duration-200"
+                style={{
+                  background:
+                    copiedId === account.id
+                      ? "var(--color-burgundy)"
+                      : "var(--color-rose-gold)",
+                  color: "white",
+                }}
+                whileTap={{ scale: 0.95 }}
+                id={`copy-btn-${account.id}`}
+              >
+                {copiedId === account.id ? (
+                  <>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Tersalin!
+                  </>
+                ) : (
+                  <>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                    </svg>
+                    Salin
+                  </>
+                )}
+              </motion.button>
+            </div>
+          </motion.div>
+        ))}
+      </div>
 
 
-      {/* QRIS Section */}
       <motion.div
         className="max-w-sm mx-auto"
         initial={{ opacity: 0, y: 20 }}

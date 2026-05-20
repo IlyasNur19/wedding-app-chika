@@ -79,15 +79,8 @@ export const BANK_ACCOUNTS = [
   {
     id: 1,
     bank: "Bank Central Asia (BCA)",
-    accountNumber: "1234567890",
-    accountName: "Ahmad Fauzan",
-    icon: "🏦",
-  },
-  {
-    id: 2,
-    bank: "Bank Mandiri",
-    accountNumber: "9876543210",
-    accountName: "Siti Nurhaliza",
+    accountNumber: "3271285823",
+    accountName: "Chika Amelia Putri",
     icon: "🏦",
   },
 ];
