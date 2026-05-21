@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { AnimatePresence } from "framer-motion";
 import WelcomeScreen from "@/components/WelcomeScreen";
 import MusicPlayer from "@/components/MusicPlayer";
@@ -12,16 +12,23 @@ import StoryTimeline from "@/components/StoryTimeline";
 import RSVPSection from "@/components/RSVPSection";
 import DigitalGift from "@/components/DigitalGift";
 import Footer from "@/components/Footer";
+import { useAudio } from "@/lib/audio";
 
 export default function Home() {
   const [isWelcomeOpen, setIsWelcomeOpen] = useState(true);
+  const { play } = useAudio();
+
+  const handleOpen = useCallback(() => {
+    play();
+    setIsWelcomeOpen(false);
+  }, [play]);
 
   return (
     <>
       {/* Welcome Screen Overlay */}
       <AnimatePresence>
         {isWelcomeOpen && (
-          <WelcomeScreen onOpen={() => setIsWelcomeOpen(false)} />
+          <WelcomeScreen onOpen={handleOpen} />
         )}
       </AnimatePresence>
 

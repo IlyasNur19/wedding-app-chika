@@ -1,58 +1,15 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useAudio } from "@/lib/audio";
 
 export default function MusicPlayer() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isReady, setIsReady] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  useEffect(() => {
-    // Create audio element
-    audioRef.current = new Audio();
-    // Using a royalty-free wedding music placeholder
-    // Replace this URL with actual wedding music
-    audioRef.current.loop = true;
-    audioRef.current.volume = 0.3;
-    setIsReady(true);
-
-    return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
-      }
-    };
-  }, []);
-
-  const togglePlay = () => {
-    if (!audioRef.current || !isReady) return;
-
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play().catch(() => {
-        // Autoplay blocked — user needs to interact first
-      });
-    }
-    setIsPlaying(!isPlaying);
-  };
-
-  // Auto-play when component mounts (after welcome screen)
-  useEffect(() => {
-    if (isReady && audioRef.current) {
-      audioRef.current.play().then(() => {
-        setIsPlaying(true);
-      }).catch(() => {
-        // Autoplay blocked
-      });
-    }
-  }, [isReady]);
+  const { isPlaying, toggle } = useAudio();
 
   return (
     <AnimatePresence>
       <motion.button
-        onClick={togglePlay}
+        onClick={toggle}
         className="fixed top-5 right-5 z-50 w-12 h-12 rounded-full glass flex items-center justify-center shadow-lg"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}

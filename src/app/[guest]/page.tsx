@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, use } from "react";
+import { useState, useCallback, use } from "react";
 import { AnimatePresence } from "framer-motion";
 import WelcomeScreen from "@/components/WelcomeScreen";
 import MusicPlayer from "@/components/MusicPlayer";
@@ -12,6 +12,7 @@ import StoryTimeline from "@/components/StoryTimeline";
 import RSVPSection from "@/components/RSVPSection";
 import DigitalGift from "@/components/DigitalGift";
 import Footer from "@/components/Footer";
+import { useAudio } from "@/lib/audio";
 
 export default function GuestPage({
   params,
@@ -21,6 +22,12 @@ export default function GuestPage({
   const { guest } = use(params);
   const guestName = decodeURIComponent(guest);
   const [isWelcomeOpen, setIsWelcomeOpen] = useState(true);
+  const { play } = useAudio();
+
+  const handleOpen = useCallback(() => {
+    play();
+    setIsWelcomeOpen(false);
+  }, [play]);
 
   return (
     <>
@@ -28,7 +35,7 @@ export default function GuestPage({
       <AnimatePresence>
         {isWelcomeOpen && (
           <WelcomeScreen
-            onOpen={() => setIsWelcomeOpen(false)}
+            onOpen={handleOpen}
             guestName={guestName}
           />
         )}
