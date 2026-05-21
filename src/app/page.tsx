@@ -35,8 +35,8 @@ export default function Home() {
       {/* Main Content */}
       {!isWelcomeOpen && (
         <>
-          <MusicPlayer />
           <BottomNav />
+          <MusicPlayer />
 
           <main className="main-content">
             <HeroSection />

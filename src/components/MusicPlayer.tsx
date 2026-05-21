@@ -10,7 +10,7 @@ export default function MusicPlayer() {
     <AnimatePresence>
       <motion.button
         onClick={toggle}
-        className="fixed top-5 right-5 z-50 w-12 h-12 rounded-full glass flex items-center justify-center shadow-lg"
+        className="fixed top-5 right-5 z-[100] w-12 h-12 rounded-full glass flex items-center justify-center shadow-lg"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.5, type: "spring", stiffness: 200 }}

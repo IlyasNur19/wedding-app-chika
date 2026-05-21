@@ -72,13 +72,19 @@ export default function DigitalGift() {
             {/* Bank Info */}
             <div className="flex items-center gap-3 mb-4">
               <div
-                className="w-11 h-11 rounded-xl flex items-center justify-center text-lg"
+                className="w-11 h-11 rounded-xl flex items-center justify-center overflow-hidden"
                 style={{
                   background: "var(--color-champagne-light)",
                   border: "1px solid var(--color-champagne-dark)",
                 }}
               >
-                {account.icon}
+                <Image 
+                  src="/bca.png" 
+                  alt="BCA Logo" 
+                  width={36} 
+                  height={36} 
+                  className="object-contain"
+                />
               </div>
               <div className="text-left">
                 <p className="text-[var(--color-burgundy)] text-sm font-heading font-semibold">

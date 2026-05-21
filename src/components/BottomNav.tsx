@@ -76,7 +76,7 @@ export default function BottomNav() {
 
   return (
     <motion.nav
-      className="fixed bottom-0 left-0 right-0 z-50 glass"
+      className="fixed bottom-0 left-0 right-0 z-[100] glass"
       initial={{ y: 100 }}
       animate={{ y: 0 }}
       transition={{ delay: 0.5, type: "spring", stiffness: 200, damping: 25 }}
@@ -110,11 +110,10 @@ export default function BottomNav() {
                 <NavIcon icon={item.icon} isActive={isActive} />
               </span>
               <span
-                className={`relative z-10 text-[10px] font-medium transition-colors duration-300 ${
-                  isActive
+                className={`relative z-10 text-[10px] font-medium transition-colors duration-300 ${isActive
                     ? "text-[var(--color-burgundy)]"
                     : "text-[var(--color-charcoal-light)]"
-                }`}
+                  }`}
               >
                 {item.label}
               </span>

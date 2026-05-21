@@ -81,7 +81,6 @@ export const BANK_ACCOUNTS = [
     bank: "Bank Central Asia (BCA)",
     accountNumber: "3271285823",
     accountName: "Chika Amelia Putri",
-    icon: "🏦",
   },
 ];
 
