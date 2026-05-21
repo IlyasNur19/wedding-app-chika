@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     description: "6 Juni 2026 — Kami mengundang Anda untuk berbagi kebahagiaan bersama.",
     type: "website",
   },
+  icons: {
+    icon: "/berrychika.svg",
+  },
 };
 
 export default function RootLayout({

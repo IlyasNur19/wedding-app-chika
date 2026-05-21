@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 2000 2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(3.992016,0,0,5.865103,-950.0998,-480.938416)">
+        <rect x="238" y="82" width="501" height="341" style="fill:rgb(238,247,234);"/>
+    </g>
+    <g transform="matrix(1.154005,0,0,1.154005,-191.201915,-132.48021)">
+        <g transform="matrix(10.10582,0,0,10.10582,-6372.725868,-4930.712069)">
+            <g transform="matrix(49.888743,0,0,49.888743,778.005145,571.936057)">
+            </g>
+            <text x="667.851px" y="571.936px" style="font-family:'GreatVibes-Regular', 'Great Vibes';font-size:49.889px;fill:rgb(26,60,42);stroke:rgb(26,60,42);stroke-width:1.07px;">B<tspan x="720.384px " y="571.936px ">e</tspan>rry</text>
+        </g>
+        <g transform="matrix(8.204891,0,0,8.204891,-4851.893194,-3276.314828)">
+            <g transform="matrix(61.447087,0,0,61.447087,792.035362,571.936057)">
+            </g>
+            <text x="667.851px" y="571.936px" style="font-family:'GreatVibes-Regular', 'Great Vibes';font-size:61.447px;fill:rgb(26,60,42);stroke:rgb(26,60,42);stroke-width:1.32px;">C<tspan x="716.455px " y="571.936px ">h</tspan>ika</text>
+        </g>
+    </g>
+</svg>
