@@ -56,38 +56,18 @@ export default function CoupleProfile() {
       <div className="flex flex-col items-center gap-10 max-w-sm mx-auto">
         {/* Groom Card */}
         <motion.div
-          className="wedding-card w-full text-center relative overflow-hidden p-20"
+          className="wedding-card w-full text-center relative overflow-hidden p-10"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.7 }}
         >
-          {/* Top Flower Ornament */}
-          <div className="absolute top-0 left-0 w-full pointer-events-none">
-            <Image
-              src="/top-border-flower.png"
-              alt=""
-              width={600}
-              height={200}
-              className="w-full h-auto object-cover opacity-85"
-            />
-          </div>
 
-          {/* bottom Flower Ornament */}
-          <div className="absolute bottom-0 left-0 w-full pointer-events-none">
-            <Image
-              src="/bottom-border-flower.png"
-              alt=""
-              width={600}
-              height={200}
-              className="w-full h-auto object-cover opacity-85"
-            />
-          </div>
 
           {/* Avatar Placeholder */}
           <div className="relative w-32 h-32 mx-auto mb-4">
             <div className="w-full h-full rounded-full bg-gradient-to-br from-[var(--color-champagne)] to-[var(--color-champagne-dark)] flex items-center justify-center border-4 border-white shadow-lg">
-              <Image src="/laki-laki_1.png" alt="Cowok" width={128} height={128} className="w-full h-full rounded-full object-cover"/>
+              <Image src="/laki-laki_1.png" alt="Cowok" width={128} height={128} className="w-full h-full rounded-full object-cover" />
             </div>
           </div>
 
@@ -131,36 +111,18 @@ export default function CoupleProfile() {
 
         {/* Bride Card */}
         <motion.div
-          className="wedding-card w-full text-center relative overflow-hidden p-20"
+          className="wedding-card w-full text-center relative overflow-hidden p-10"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.7 }}
         >
-          {/* Top Flower Ornament */}
-          <div className="absolute top-0 left-0 w-full pointer-events-none">
-            <Image
-              src="/top-border-flower.png"
-              alt=""
-              width={600}
-              height={200}
-              className="w-full h-auto object-cover opacity-85"
-            />
-          </div>
-          <div className="absolute bottom-0 left-0 w-full pointer-events-none">
-            <Image
-              src="/bottom-border-flower.png"
-              alt=""
-              width={600}
-              height={200}
-              className="w-full h-auto object-cover opacity-85"
-            />
-          </div>
+
 
           {/* Avatar Placeholder */}
           <div className="relative w-32 h-32 mx-auto mb-4">
             <div className="w-full h-full rounded-full bg-gradient-to-br from-[var(--color-soft-pink)] to-[var(--color-rose-gold-light)] flex items-center justify-center border-4 border-white shadow-lg">
-              <Image src="/perempuan_1.png" alt="Cewek" width={128} height={128} className="w-full h-full rounded-full object-cover"/>
+              <Image src="/perempuan_1.png" alt="Cewek" width={128} height={128} className="w-full h-full rounded-full object-cover" />
             </div>
           </div>
 

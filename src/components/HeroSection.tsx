@@ -8,42 +8,52 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className={clsx('section-wrapper', 'relative', 'min-h-screen', 'flex', 'flex-col', 'items-center', 'justify-center', 'text-center', 'overflow-hidden')}
+      className="section-wrapper relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden"
       style={{
         background:
           "radial-gradient(ellipse at 50% 0%, var(--color-soft-pink) 0%, var(--color-ivory) 60%)",
       }}
     >
-      {/* Floating decorative elements */}
-      <div className={clsx('absolute', 'inset-0', 'pointer-events-none', 'overflow-hidden')}>
-        {/* Top left ornament */}
-        <motion.div
-          className={clsx('absolute', '-top-10', '-left-10', 'w-48', 'h-48', 'opacity-10')}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-        >
-          <svg viewBox="0 0 200 200" fill="var(--color-rose-gold)">
-            <path d="M100,10 C150,10 190,50 190,100 C190,150 150,190 100,190 C50,190 10,150 10,100 C10,50 50,10 100,10 Z M100,30 C60,30 30,60 30,100 C30,140 60,170 100,170 C140,170 170,140 170,100 C170,60 140,30 100,30 Z" />
-          </svg>
-        </motion.div>
 
-        {/* Bottom right ornament */}
-        <motion.div
-          className={clsx('absolute', '-bottom-10', '-right-10', 'w-56', 'h-56', 'opacity-10')}
-          animate={{ rotate: -360 }}
-          transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-        >
-          <svg viewBox="0 0 200 200" fill="var(--color-burgundy)">
-            <path d="M100,10 C150,10 190,50 190,100 C190,150 150,190 100,190 C50,190 10,150 10,100 C10,50 50,10 100,10 Z M100,30 C60,30 30,60 30,100 C30,140 60,170 100,170 C140,170 170,140 170,100 C170,60 140,30 100,30 Z" />
-          </svg>
-        </motion.div>
-      </div>
+      {/* Ornament Overlay */}
+      <motion.div
+        className="absolute inset-0 w-full h-full z-40 pointer-events-none"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <Image
+          src="/flower-ornamen.svg"
+          alt="Ornament Hero Section"
+          fill
+          className=" object-cover"
+          priority
+        />
+      </motion.div>
+
+      <motion.div
+        className="absolute inset-0 w-full h-full z-50 -scale-85 pointer-events-none"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <Image
+          src="/border-ornamen.svg"
+          alt="Ornament Hero Section"
+          fill
+          className=" object-center"
+          priority
+        />
+      </motion.div>
 
       {/* Content */}
-      <div className={clsx('relative', 'z-10', 'flex', 'flex-col', 'items-center')}>
+      <div className="relative z-10 flex flex-col items-center">
+
         {/* Bismillah */}
         <motion.p
-          className={clsx('text-[var(--color-burgundy)]', 'text-xl', 'mb-2', 'opacity-70')}
+          className="text-[var(--color-burgundy)] text-xl mb-2 opacity-70"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 0.7, y: 0 }}
           viewport={{ once: true }}
@@ -55,7 +65,7 @@ export default function HeroSection() {
 
         {/* Subtitle */}
         <motion.p
-          className={clsx('text-[var(--color-rose-gold)]', 'text-xs', 'tracking-[6px]', 'uppercase', 'mb-15')}
+          className="text-[var(--color-rose-gold)] text-xs tracking-[6px] uppercase mb-15"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -77,22 +87,15 @@ export default function HeroSection() {
             alt="Flower Ornament"
             width={800}
             height={800}
-            className={clsx('w-70', 'md:w-40', 'h-auto', 'opacity-90', 'object-contain')}
+            className="w-70 md:w-40 h-auto opacity-90 object-contain"
           />
         </motion.div> */}
 
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          <Image src="/oranamen-heroSection2.png" alt="ornamen" width={1920} height={1080} className={clsx('z-100', 'object-fit')} />
-        </motion.div>
+
 
         {/* Groom Name */}
         <motion.h1
-          className={clsx('font-script', 'text-6xl', 'md:text-7xl', 'text-[var(--color-burgundy)]', 'leading-tight')}
+          className="font-script text-6xl md:text-7xl text-[var(--color-burgundy)] leading-tight"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -109,14 +112,14 @@ export default function HeroSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.6, type: "spring", stiffness: 200 }}
         >
-          <span className={clsx('font-script', 'text-4xl', 'text-[var(--color-rose-gold)]')}>
+          <span className="font-script text-4xl text-[var(--color-rose-gold)]">
             &
           </span>
         </motion.div>
 
         {/* Bride Name */}
         <motion.h1
-          className={clsx('font-script', 'text-6xl', 'md:text-7xl', 'text-[var(--color-burgundy)]', 'leading-tight', 'mb-8')}
+          className="font-script text-6xl md:text-7xl text-[var(--color-burgundy)] leading-tight mb-8"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -127,7 +130,7 @@ export default function HeroSection() {
 
         {/* Ornament */}
         {/* <motion.div
-          className={clsx('relative', 'bottom-10')}
+          className="relative bottom-10"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -138,23 +141,23 @@ export default function HeroSection() {
             alt="Flower Ornament" 
             width={800} 
             height={800} 
-            className={clsx('w-70', 'md:w-40', 'h-auto', 'opacity-90', 'object-contain')}
+            className="w-70 md:w-40 h-auto opacity-90 object-contain"
           />
         </motion.div> */}
 
 
         {/* Date */}
         <motion.div
-          className={clsx('flex', 'flex-col', 'items-center', 'gap-2')}
+          className="flex flex-col items-center gap-2"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 1.1, duration: 0.6 }}
         >
-          <p className={clsx('text-[var(--color-charcoal)]', 'text-sm', 'tracking-[3px]', 'uppercase')}>
+          <p className="text-[var(--color-charcoal)] text-sm tracking-[3px] uppercase">
             Sabtu, 6 Juni 2026
           </p>
-          <p className={clsx('text-[var(--color-charcoal-light)]', 'text-xs', 'tracking-widest')}>
+          <p className="text-[var(--color-charcoal-light)] text-xs tracking-widest">
             Karanganyar, Indonesia
           </p>
         </motion.div>
@@ -168,11 +171,11 @@ export default function HeroSection() {
           transition={{ delay: 1.5 }}
         >
           <motion.div
-            className={clsx('flex', 'flex-col', 'items-center', 'gap-2', 'text-[var(--color-rose-gold)]')}
+            className="flex flex-col items-center gap-2 text-[var(--color-rose-gold)]"
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
-            <p className={clsx('text-xs', 'tracking-widest', 'uppercase', 'opacity-60')}>
+            <p className="text-xs tracking-widest uppercase opacity-60">
               Scroll ke bawah
             </p>
             <svg

@@ -7,19 +7,25 @@ import Image from "next/image";
 
 interface WelcomeScreenProps {
   onOpen: () => void;
+  guestName?: string;
 }
 
-export default function WelcomeScreen({ onOpen }: WelcomeScreenProps) {
+export default function WelcomeScreen({ onOpen, guestName: guestNameProp }: WelcomeScreenProps) {
   const [guestName, setGuestName] = useState("Tamu Undangan");
   const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
-    setGuestName(getGuestName());
+    // Priority: prop from path > query param ?to= > default
+    if (guestNameProp) {
+      setGuestName(guestNameProp);
+    } else {
+      setGuestName(getGuestName());
+    }
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "";
     };
-  }, []);
+  }, [guestNameProp]);
 
   const handleOpen = () => {
     setIsExiting(true);
@@ -41,39 +47,21 @@ export default function WelcomeScreen({ onOpen }: WelcomeScreenProps) {
           {/* Background */}
           <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-ivory)] via-[var(--color-champagne-light)] to-[var(--color-soft-pink)]" />
 
-          {/* Top Border Ornament */}
-          <motion.div 
-            className="absolute top-0 left-0 w-full pointer-events-none z-0 flex justify-center"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+          <motion.div
+            className="absolute inset-0 w-full h-full z-40 pointer-events-none"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
           >
-            <Image 
-              src="/top-border-flower.png" 
-              alt="Top Ornament" 
-              width={1200} 
-              height={400} 
-              className="w-full h-auto object-cover md:object-contain max-h-[30vh] sm:max-h-[40vh] opacity-90"
+            <Image
+              src="/flower-ornamen.svg"
+              alt="Ornament Hero Section"
+              fill
+              className=" object-cover"
               priority
             />
           </motion.div>
-
-        {/* bottom border ornament  */}
-        <motion.div
-          className="absolute bottom-0 left-0 w-full pointer-events-none z-0 flex justify-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        >
-          <Image
-            src="/bottom-border-flower.png"
-            alt="Bottom Ornament"
-            width={1200}
-            height={400}
-            className="w-full h-auto object-cover md:object-contain max-h-[30vh] sm:max-h-[40vh] opacity-90"
-            priority
-          />
-        </motion.div>
 
           {/* Content Card */}
           <motion.div
@@ -175,7 +163,7 @@ export default function WelcomeScreen({ onOpen }: WelcomeScreenProps) {
             {/* Open Button */}
             <motion.button
               onClick={handleOpen}
-              className="btn-primary text-base px-10 py-4 tracking-wide"
+              className="btn-primary text-base px-10 py-4 tracking-wide z-50"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2.2, duration: 0.5 }}
