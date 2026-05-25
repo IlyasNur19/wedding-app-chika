@@ -75,36 +75,28 @@ export default function HeroSection() {
         </motion.p>
 
         {/* Ornament */}
-        {/* <motion.div
-          className="relative"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          <Image
-            src="/bunga-asset-1.png"
-            alt="Flower Ornament"
-            width={800}
-            height={800}
-            className="w-70 md:w-40 h-auto opacity-90 object-contain"
-          />
-        </motion.div> */}
 
         {/* Bride Name */}
-        <motion.h1
-          className="font-script text-6xl md:text-7xl text-[var(--color-burgundy)] leading-tight mb-8"
+        <motion.div
+          className="mb-4"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8, duration: 0.7 }}
         >
-          {COUPLE.bride.shortName}
-        </motion.h1>
+          <Image
+            src="/chika.svg"
+            alt={COUPLE.bride.shortName}
+            width={320}
+            height={240}
+            className=" w-32 md:w-72 h-auto"
+            priority
+          />
+        </motion.div>
 
         {/* Ampersand */}
         <motion.div
-          className="my-3"
+          className="mb-5"
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -116,32 +108,21 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Groom Name */}
-        <motion.h1
-          className="font-script text-6xl md:text-7xl text-[var(--color-burgundy)] leading-tight"
+        <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.7 }}
         >
-          {COUPLE.groom.shortName}
-        </motion.h1>
-
-        {/* Ornament */}
-        {/* <motion.div
-          className="relative bottom-10"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          <Image 
-            src="/bunga-asset-2.png" 
-            alt="Flower Ornament" 
-            width={800} 
-            height={800} 
-            className="w-70 md:w-40 h-auto opacity-90 object-contain"
+          <Image
+            src="/berry.svg"
+            alt={COUPLE.groom.shortName}
+            width={360}
+            height={240}
+            className="w-32 md:w-80 h-auto"
+            priority
           />
-        </motion.div> */}
+        </motion.div>
 
 
         {/* Date */}

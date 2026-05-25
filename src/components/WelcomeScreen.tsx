@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getGuestName } from "@/lib/utils";
 import Image from "next/image";
+import { COUPLE } from "@/lib/constants";
 
 interface WelcomeScreenProps {
   onOpen: () => void;
@@ -106,11 +107,18 @@ export default function WelcomeScreen({ onOpen, guestName: guestNameProp }: Welc
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
             >
-              Chika
+              <Image
+                src="/chika.svg"
+                alt={COUPLE.bride.shortName}
+                width={360}
+                height={240}
+                className="w-32 md:w-80 h-auto"
+                priority
+              />
             </motion.h1>
 
             <motion.div
-              className="text-[var(--color-rose-gold)] text-3xl font-script my-1"
+              className="text-[var(--color-rose-gold)] text-3xl font-script mb-5"
               initial={{ opacity: 0, rotate: -10 }}
               animate={{ opacity: 1, rotate: 0 }}
               transition={{ delay: 1.2, duration: 0.5 }}
@@ -119,12 +127,18 @@ export default function WelcomeScreen({ onOpen, guestName: guestNameProp }: Welc
             </motion.div>
 
             <motion.h1
-              className="font-script text-5xl md:text-6xl text-[var(--color-burgundy)] mb-6 leading-tight"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.4, duration: 0.6, ease: "easeOut" }}
             >
-              Berry
+              <Image
+                src="/berry.svg"
+                alt={COUPLE.groom.shortName}
+                width={360}
+                height={240}
+                className="w-32 md:w-80 h-auto"
+                priority
+              />
             </motion.h1>
 
             {/* Ornament bottom */}
