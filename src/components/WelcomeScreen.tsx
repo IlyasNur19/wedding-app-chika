@@ -6,6 +6,55 @@ import { getGuestName } from "@/lib/utils";
 import Image from "next/image";
 import { COUPLE } from "@/lib/constants";
 
+/* Inline SVG name components — immune to cross-browser font issues */
+function BrideName({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 1602.31 1189.62"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label={COUPLE.bride.shortName}
+    >
+      <text
+        className="font-script"
+        fill="#1b3c2a"
+        stroke="#1b3c2a"
+        strokeLinejoin="round"
+        strokeWidth="19.14"
+        style={{ fontSize: "786.08px", fontFamily: "var(--font-script)" }}
+        transform="translate(9.57 717.04)"
+      >
+        {COUPLE.bride.shortName}
+      </text>
+    </svg>
+  );
+}
+
+function GroomName({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 1820.84 1189.62"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label={COUPLE.groom.shortName}
+    >
+      <text
+        className="font-script"
+        fill="#1b3c2a"
+        stroke="#1b3c2a"
+        strokeLinejoin="round"
+        strokeWidth="19.14"
+        style={{ fontSize: "786.09px", fontFamily: "var(--font-script)" }}
+        transform="translate(9.57 717.04)"
+      >
+        {COUPLE.groom.shortName}
+      </text>
+    </svg>
+  );
+}
+
 interface WelcomeScreenProps {
   onOpen: () => void;
   guestName?: string;
@@ -107,18 +156,11 @@ export default function WelcomeScreen({ onOpen, guestName: guestNameProp }: Welc
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
             >
-              <Image
-                src="/chika.svg"
-                alt={COUPLE.bride.shortName}
-                width={360}
-                height={240}
-                className="w-32 md:w-80 h-auto"
-                priority
-              />
+              <BrideName className="w-32 md:w-80 h-auto" />
             </motion.h1>
 
             <motion.div
-              className="text-[var(--color-rose-gold)] text-3xl font-script mb-5"
+              className="text-[var(--color-rose-gold)] text-3xl font-script my-1"
               initial={{ opacity: 0, rotate: -10 }}
               animate={{ opacity: 1, rotate: 0 }}
               transition={{ delay: 1.2, duration: 0.5 }}
@@ -131,14 +173,7 @@ export default function WelcomeScreen({ onOpen, guestName: guestNameProp }: Welc
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.4, duration: 0.6, ease: "easeOut" }}
             >
-              <Image
-                src="/berry.svg"
-                alt={COUPLE.groom.shortName}
-                width={360}
-                height={240}
-                className="w-32 md:w-80 h-auto"
-                priority
-              />
+              <GroomName className="w-32 md:w-80 h-auto" />
             </motion.h1>
 
             {/* Ornament bottom */}

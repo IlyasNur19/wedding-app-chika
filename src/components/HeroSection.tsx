@@ -4,6 +4,55 @@ import { motion } from "framer-motion";
 import { COUPLE } from "@/lib/constants";
 import Image from "next/image";
 
+/* Inline SVG name components — immune to cross-browser font issues */
+function BrideName({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 1602.31 1189.62"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label={COUPLE.bride.shortName}
+    >
+      <text
+        className="font-script"
+        fill="#1b3c2a"
+        stroke="#1b3c2a"
+        strokeLinejoin="round"
+        strokeWidth="19.14"
+        style={{ fontSize: "786.08px", fontFamily: "var(--font-script)" }}
+        transform="translate(9.57 717.04)"
+      >
+        {COUPLE.bride.shortName}
+      </text>
+    </svg>
+  );
+}
+
+function GroomName({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 1820.84 1189.62"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label={COUPLE.groom.shortName}
+    >
+      <text
+        className="font-script"
+        fill="#1b3c2a"
+        stroke="#1b3c2a"
+        strokeLinejoin="round"
+        strokeWidth="19.14"
+        style={{ fontSize: "786.09px", fontFamily: "var(--font-script)" }}
+        transform="translate(9.57 717.04)"
+      >
+        {COUPLE.groom.shortName}
+      </text>
+    </svg>
+  );
+}
+
 export default function HeroSection() {
   return (
     <section
@@ -84,14 +133,7 @@ export default function HeroSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.8, duration: 0.7 }}
         >
-          <Image
-            src="/chika.svg"
-            alt={COUPLE.bride.shortName}
-            width={320}
-            height={240}
-            className=" w-32 md:w-72 h-auto"
-            priority
-          />
+          <BrideName className="w-32 md:w-72 h-auto" />
         </motion.div>
 
         {/* Ampersand */}
@@ -114,14 +156,7 @@ export default function HeroSection() {
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.7 }}
         >
-          <Image
-            src="/berry.svg"
-            alt={COUPLE.groom.shortName}
-            width={360}
-            height={240}
-            className="w-32 md:w-80 h-auto"
-            priority
-          />
+          <GroomName className="w-32 md:w-80 h-auto" />
         </motion.div>
 
 
