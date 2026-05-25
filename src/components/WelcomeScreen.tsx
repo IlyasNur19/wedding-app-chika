@@ -106,7 +106,7 @@ export default function WelcomeScreen({ onOpen, guestName: guestNameProp }: Welc
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
             >
-              Berry
+              Chika
             </motion.h1>
 
             <motion.div
@@ -124,7 +124,7 @@ export default function WelcomeScreen({ onOpen, guestName: guestNameProp }: Welc
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.4, duration: 0.6, ease: "easeOut" }}
             >
-              Chika
+              Berry
             </motion.h1>
 
             {/* Ornament bottom */}

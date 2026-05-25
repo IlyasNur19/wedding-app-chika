@@ -91,17 +91,15 @@ export default function HeroSection() {
           />
         </motion.div> */}
 
-
-
-        {/* Groom Name */}
+        {/* Bride Name */}
         <motion.h1
-          className="font-script text-6xl md:text-7xl text-[var(--color-burgundy)] leading-tight"
-          initial={{ opacity: 0, x: -30 }}
+          className="font-script text-6xl md:text-7xl text-[var(--color-burgundy)] leading-tight mb-8"
+          initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.7 }}
+          transition={{ delay: 0.8, duration: 0.7 }}
         >
-          {COUPLE.groom.shortName}
+          {COUPLE.bride.shortName}
         </motion.h1>
 
         {/* Ampersand */}
@@ -117,15 +115,15 @@ export default function HeroSection() {
           </span>
         </motion.div>
 
-        {/* Bride Name */}
+        {/* Groom Name */}
         <motion.h1
-          className="font-script text-6xl md:text-7xl text-[var(--color-burgundy)] leading-tight mb-8"
-          initial={{ opacity: 0, x: 30 }}
+          className="font-script text-6xl md:text-7xl text-[var(--color-burgundy)] leading-tight"
+          initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.8, duration: 0.7 }}
+          transition={{ delay: 0.4, duration: 0.7 }}
         >
-          {COUPLE.bride.shortName}
+          {COUPLE.groom.shortName}
         </motion.h1>
 
         {/* Ornament */}
